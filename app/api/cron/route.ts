@@ -1,9 +1,8 @@
 import { NextResponse } from 'next/server'
 
 export async function GET(request: Request) {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
+  const error = await fetch('https://jsonplaceholder.typicode.com/todo')
 
-  console.log(res)
-  return new Response('res: ', { status: 500 })
+  console.error(error)
+  return new Response('res: null', { status: 500 })
 }
