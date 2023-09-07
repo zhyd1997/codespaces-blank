@@ -5,6 +5,5 @@ export async function GET(request: Request) {
       .then(response => response.json())
 
   console.log(res)
-  NextResponse.error()
-  // .status(500).json({ message: 'test' })
+  return new Response('res: ', { status: 500 })
 }
